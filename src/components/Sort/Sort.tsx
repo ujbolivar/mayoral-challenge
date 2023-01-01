@@ -1,5 +1,5 @@
 import React from 'react';
-import { SortProps } from './Sort.interface';
+import SortProps from './Sort.interface';
 import styles from './Sort.module.css';
 
 const Sort = ({ onSort }: SortProps) => {

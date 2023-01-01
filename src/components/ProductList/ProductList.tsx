@@ -1,5 +1,6 @@
-import Image from 'next/image';
 import { useState, useEffect } from 'react';
+import styles from './ProductList.module.css';
+import ProductCard from '../ProductCard/ProductCard';
 
 const ProductsList = () => {
     const [products, setProducts] = useState([]);
@@ -9,8 +10,9 @@ const ProductsList = () => {
     const fetchProducts = async () => {
         try {
             setLoading(true);
-            const response = await fetch('https://fakestoreapi.com/products/category/clothing');
+            const response = await fetch('https://fakestoreapi.com/products/category/jewelery');
             const data = await response.json();
+            console.log(data);
             setProducts(data);
             setLoading(false);
         } catch (err) {
@@ -23,21 +25,18 @@ const ProductsList = () => {
     }, []);
     
     return (
-        loading ?
-        //<spinner /> :
-        products ?
-        products.map((product) => (
-            <div key={product.id}>
-            <Image src={product.image} alt={product.title} />
-            <h3>{product.title}</h3>
-            <p>{product.description}</p>
-            <p>{product.price}</p>
+        <div className={styles.productList}>
+        {loading ?
+            <div>make a spinner component</div> :
+            products ?
+            products.map((product, index) => (
+                <ProductCard key={index} product={product} />
+                )) :
+                error ?
+                <div>{error}</div> :
+                <div>No data</div>
+        }
             </div>
-            )) :
-            error ?
-            <div>{error}</div> :
-            <div>No data</div> :
-            <></>
             );
         };
         
