@@ -1,6 +1,7 @@
 import { NextPage } from 'next';
 import SearchBar from '../components/SearchBar/SearchBar';
 import Sort from '../components/Sort/Sort';
+import ProductList from '../components/ProductList/ProductList';
 
 const HomePage: NextPage = () => {
   const handleSearch = (searchTerm: string) => {
@@ -22,12 +23,7 @@ const HomePage: NextPage = () => {
         <Sort onSort={handleSort} />
       </nav>
       <section>
-        <h2>Items</h2>
-        <ul>
-          <li>Item 1</li>
-          <li>Item 2</li>
-          <li>Item 3</li>
-        </ul>
+        <ProductList />
       </section>
     </div>
   );
