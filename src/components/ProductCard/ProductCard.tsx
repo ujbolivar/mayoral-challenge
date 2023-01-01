@@ -1,6 +1,7 @@
 import React from 'react';
 import Product from './ProductCard.interface';
 import styles from './ProductCard.module.css';
+import Button from '../AddButton/AddButton';
 
 const ProductCard = ({ product }: Product) => {
     
@@ -10,6 +11,7 @@ const ProductCard = ({ product }: Product) => {
         <h3 className={styles.productTitle}>{product.title}</h3>
         <p className={styles.productPrice}>{product.price}</p>
         <p className={styles.productDescription}>{product.description}</p>
+        <Button />
     </div>
     )
 }
