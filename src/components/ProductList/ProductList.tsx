@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import styles from './ProductList.module.css';
+import Spinner from 'components/Spinner/Spinner';
 import ProductCard from '../ProductCard/ProductCard';
 
 const ProductsList = () => {
@@ -27,7 +28,7 @@ const ProductsList = () => {
     return (
         <div className={styles.productList}>
         {loading ?
-            <div>make a spinner component</div> :
+            <Spinner /> :
             products ?
             products.map((product, index) => (
                 <ProductCard key={index} product={product} />
