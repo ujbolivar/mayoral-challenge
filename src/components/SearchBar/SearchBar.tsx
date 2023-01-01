@@ -7,6 +7,7 @@ const SearchBar = (props: SearchBarProps) => {
     const handleSearchTerm = (event: React.ChangeEvent<HTMLInputElement>) => {
         setSearchTerm(event.target.value);
     };
+    
     return (
         <div className={styles.container}>
         <input
