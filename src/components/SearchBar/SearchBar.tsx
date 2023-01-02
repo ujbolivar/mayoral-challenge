@@ -10,14 +10,16 @@ const SearchBar = (props: SearchBarProps) => {
     
     return (
         <div className={styles.container}>
-        <input
-        className={styles.input}
-            type="text"
-            placeholder="Search"
-            value={searchTerm}
-            onChange={handleSearchTerm}
-        />
-        <button className={styles.button} onClick={() => props.onSearch(searchTerm)}>Search</button>
+			<div className="styles.icon">
+				<span className="material-icons" >search</span>
+			</div>
+			<input
+			type="text"
+			className={styles.searchInput}
+			placeholder="Buscar"
+			value={searchTerm}
+			onChange={handleSearchTerm}
+			/>
         </div>
     );
     };

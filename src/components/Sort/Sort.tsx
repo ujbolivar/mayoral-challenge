@@ -5,8 +5,8 @@ import styles from './Sort.module.css';
 const Sort = ({ onSort }: SortProps) => {
     return (
         <div className={styles.sort}>
-            <button onClick={() => onSort('asc')}>+</button>
             <button onClick={() => onSort('desc')}>-</button>
+            <button onClick={() => onSort('asc')}>+</button>
         </div>
     );
 };

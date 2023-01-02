@@ -1,5 +1,18 @@
 .sort {
     display: flex;
+    justify-content: right;
     align-items: center;
-    margin: 0 0 20px;
+    width: 10%;
+}
+
+.sort button {
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 3rem;
+    color: rgb(220, 215, 215);
+    font-weight: 900;
+    padding: 0;
+    text-align: center;
+    margin: auto;
 }

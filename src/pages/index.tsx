@@ -1,4 +1,5 @@
 import { NextPage } from 'next';
+import styles from '../global styles/app.module.css'
 import SearchBar from '../components/SearchBar/SearchBar';
 import Sort from '../components/Sort/Sort';
 import ProductList from '../components/ProductList/ProductList';
@@ -18,7 +19,7 @@ const HomePage: NextPage = () => {
 
   return (
     <div>
-      <nav>
+      <nav className={styles.navBar}>
         <SearchBar onSearch={handleSearch} />
         <Sort onSort={handleSort} />
       </nav>
