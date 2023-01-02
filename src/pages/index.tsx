@@ -1,5 +1,5 @@
 import { NextPage } from 'next';
-import styles from '../global styles/app.module.css'
+import styles from '../global styles/global.module.css'
 import SearchBar from '../components/SearchBar/SearchBar';
 import Sort from '../components/Sort/Sort';
 import ProductList from '../components/ProductList/ProductList';
