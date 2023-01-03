@@ -11,7 +11,7 @@ const ProductsList = () => {
   const fetchProducts = async () => {
     try {
       setLoading(true);
-      const response = await fetch('https://fakestoreapi.com/products/category/jewelery');
+      const response = await fetch('https://fakestoreapi.com/products/?limit=20');
       const data = await response.json();
       setProducts(data);
       setLoading(false);
@@ -29,7 +29,7 @@ const ProductsList = () => {
       {loading ? (
         <Spinner />
       ) : products ? (
-        products.map((product, index) => <ProductCard key={index} product={product} />)
+        products.map((product) => <ProductCard key={product.id} product={product} />)
       ) : error ? (
         <div>{error}</div>
       ) : (

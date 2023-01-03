@@ -1,3 +1,7 @@
+.body {
+    display: block;
+}
+
 .navBar {
     width: 100%;
     display: flex;

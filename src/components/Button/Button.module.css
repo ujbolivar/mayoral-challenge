@@ -1,4 +1,4 @@
-.addButton {
+.Button {
     font: inherit;
     font-size: 1rem;
     font-weight: 500;
@@ -10,15 +10,15 @@
     cursor: pointer;
 }
 
-.addButton:hover, .addButton:active {
+.Button:hover, .Button:active {
     background-color: #ccc;
 }
 
-.addButton--alt {
+.Button--alt {
     background-color: #8b5cf6;
     color: #fff;
 }
 
-.addButton--alt:hover, .addButtonutton--alt:active {
+.Button--alt:hover, .Buttonutton--alt:active {
     background-color: #7c3aed;
 }

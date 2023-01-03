@@ -1,4 +1,4 @@
-interface Product {
+export interface Product {
     product: {
         id: number;
         title: string;
@@ -10,7 +10,5 @@ interface Product {
             rate: number;
             count: number;
         }
-    }
+    },
 }
-
-export default Product;

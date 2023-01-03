@@ -18,7 +18,7 @@ const HomePage: NextPage = () => {
   };
 
   return (
-    <div>
+    <div className={styles.body}>
       <nav className={styles.navBar}>
         <SearchBar onSearch={handleSearch} />
         <Sort onSort={handleSort} />
