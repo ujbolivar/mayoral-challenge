@@ -9,24 +9,26 @@
 	border: 1px solid rgba(128, 220, 243, 0.721);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.093);
     transition: all 0.3s ease-out;
+	justify-self: center;
+	padding-bottom: 3rem;
+	width: 100%;
 }
-
 .productCard:hover {
     transform: scale(1.05);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
 }
 
 .imageContainer {
-	display: block;
-    position: relative;
-    width: inherit;
-    object-fit: cover;
-    object-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	width: 100%;
+	min-height: 250px;
 	filter: contrast(175%) brightness(90%);
 }
 
 .productTitle {
-    width: inherit;
+    width: 100%;
 	text-align: center;
 	white-space: nowrap;
     overflow: hidden;

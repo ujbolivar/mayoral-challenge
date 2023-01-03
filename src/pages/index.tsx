@@ -4,6 +4,7 @@ import NavBar from 'components/NavBar/NavBar';
 import ProductList from '../components/ProductList/ProductList';
 import { ProductData, ProductDataListProps } from '../types/product_data';
 import { GetProducts } from '../lib/productData_api';
+import styles from '../styles/home.module.css'
 
 export const getStaticProps: GetStaticProps = async (_context) => {
     const products: ProductData[] = await GetProducts();
@@ -20,7 +21,7 @@ const HomePage: NextPage<ProductDataListProps> = ({ productDataList }: ProductDa
             <Head>
                 <title>Mayoral</title>
             </Head>
-            <header>
+            <header className={styles.header}>
                 <NavBar />
             </header>
             <section>
