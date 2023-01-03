@@ -16,10 +16,7 @@ const ProductCard = ({ product }: ProductData) => {
     return (
         <div className={styles.productCard}>
             <div className={styles.imageContainer}>
-                <ProductImage
-                    src={product.image}
-                    alt="imagen de producto"
-                />
+                <ProductImage src={product.image} alt='imagen de producto' />
             </div>
             <h3 className={styles.productTitle}>{product.title}</h3>
             <div className={styles.productPrice}>{product.price} €</div>
@@ -28,11 +25,9 @@ const ProductCard = ({ product }: ProductData) => {
                     {(product.price - product.price * (discount.value / 100)).toFixed(2)} €(-
                     {discount.value}%) €
                 </div>
-            ) : null}
-            <a href="#" className={styles.productOptionsLink}>
-                más colores
-            </a>
-            <Button text="AÑADIR" />
+            ) : <div className={styles.discountPrice}> </div> }
+            <Button variant='buttonAlt' text='más colores' />
+            <Button variant='button' text='AÑADIR' />
         </div>
     );
 };

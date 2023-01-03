@@ -1,7 +1,11 @@
 .productList {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    max-width: 100vw;
-    grid-gap: 100px;
-    justify-content: center;
+    /* grid-template-columns: repeat(5, 15rem); */
+	grid-template-columns: repeat(auto-fit, minmax(15rem, 2fr));
+    grid-gap: 1rem;
+}
+
+.productList > * {
+	justify-self: center;
+	width: 15rem;
 }

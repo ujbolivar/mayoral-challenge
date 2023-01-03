@@ -1,24 +1,26 @@
 .Button {
-    font: inherit;
-    font-size: 1rem;
-    font-weight: 500;
     padding: 0.5rem 1rem;
+    background-color: #4f9add;
+    color: #ffffff;
+    font-weight: 500;
     border: 1px solid #ccc;
     border-radius: 12px;
-    background-color: #fff;
-    color: #000;
     cursor: pointer;
 }
 
-.Button:hover, .Button:active {
-    background-color: #ccc;
+.Button:hover,
+.Button:active {
+    color: #eeeeee;
 }
 
-.Button--alt {
-    background-color: #8b5cf6;
-    color: #fff;
+.ButtonAlt {
+    background: none;
+    border: none;
+    font-size: 0.8rem;
+    font-weight: 300;
 }
 
-.Button--alt:hover, .Buttonutton--alt:active {
-    background-color: #7c3aed;
+.ButtonAlt:hover,
+.ButtonAlt:active  {
+    color: #ccc;
 }

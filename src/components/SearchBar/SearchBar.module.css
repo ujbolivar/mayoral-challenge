@@ -2,17 +2,15 @@
     display: flex;
     align-items: center;
     width: 50%;
-    /* height: 100%; */
+    padding: 5px;
     background-color: #ffffff;
     border: 3px solid #ccc;
     border-radius: 0.3rem;
-    padding: 5px;
 }
 
 .searchInput {
     width: 100%;
     padding: 0 10px;
-    font-size: 0.8rem;
     border: none;
     outline: none;
 }

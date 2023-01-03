@@ -8,8 +8,8 @@ import { grey } from '@mui/material/colors';
 const Sort = ({ onSort }: SortProps) => {
     return (
         <div className={styles.sort}>
-            <button onClick={() => onSort('desc')}><RemoveIcon sx={{ color: grey[200], fontSize: 50 }}/></button>
-            <button onClick={() => onSort('asc')}><AddIcon sx={{ color: grey[200], fontSize: 50 }}/></button>
+            <button onClick={() => onSort('desc')}><RemoveIcon sx={{ color: grey[200], fontSize: 50, strokeWidth: 3, stroke: grey[200] }}/></button>
+            <button onClick={() => onSort('asc')}><AddIcon sx={{ color: grey[200], fontSize: 50, strokeWidth: 3, stroke: grey[200] }}/></button>
         </div>
     );
 };

@@ -2,7 +2,6 @@
     display: flex;
     justify-content: right;
     align-items: center;
-    width: 10%;
 }
 
 .sort button {

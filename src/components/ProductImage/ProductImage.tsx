@@ -28,11 +28,7 @@ const ProductImage = ({ src, alt }) => {
             priority={true}
             layout="responsive"
             placeholder="blur"
-            blurDataURL={rgbDataURL(2, 129, 210)}
-            style={{
-                maxWidth: '100%',
-                height: 'auto',
-            }}
+            blurDataURL={rgbDataURL(128, 220, 243)}
         />
     );
 };
