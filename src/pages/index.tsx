@@ -1,10 +1,21 @@
-import { NextPage } from 'next';
 import Head from 'next/head';
+import { GetStaticProps, NextPage } from 'next';
 import NavBar from 'components/NavBar/NavBar';
 import ProductList from '../components/ProductList/ProductList';
+import { ProductData, ProductDataListProps } from '../types/product_data';
+import { GetProducts } from '../lib/productData_api';
 
-const HomePage: NextPage = () => {
+export const getStaticProps: GetStaticProps = async () => {
+	const url = 'https://fakestoreapi.com/products/?limit=20';
+    const products: ProductData[] = await GetProducts(url);
+    return {
+        props: {
+            productDataList: products,
+        },
+    };
+};
 
+const HomePage: NextPage<ProductDataListProps> = ({ productDataList }: ProductDataListProps) => {
     return (
         <main>
             <Head>
@@ -14,7 +25,7 @@ const HomePage: NextPage = () => {
                 <NavBar />
             </header>
             <section>
-                <ProductList />
+                <ProductList productsData={productDataList} />
             </section>
         </main>
     );

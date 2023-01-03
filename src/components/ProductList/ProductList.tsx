@@ -1,42 +1,17 @@
-import { useState, useEffect } from 'react';
+import { useMemo } from 'react';
 import styles from './ProductList.module.css';
-import Spinner from 'components/Spinner/Spinner';
 import ProductCard from '../ProductCard/ProductCard';
 
-const ProductsList = () => {
-  const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
+const ProductsList = ({ productsData }) => {
+    const memoizedProducts = useMemo(() => productsData, [productsData]);
 
-  const fetchProducts = async () => {
-    try {
-      setLoading(true);
-      const response = await fetch('https://fakestoreapi.com/products/?limit=20');
-      const data = await response.json();
-      setProducts(data);
-      setLoading(false);
-    } catch (err) {
-      setError(err);
-    }
-  };
-
-  useEffect(() => {
-    fetchProducts();
-  }, []);
-
-  return (
-    <div className={styles.productList}>
-      {loading ? (
-        <Spinner />
-      ) : products ? (
-        products.map((product) => <ProductCard key={product.id} product={product} />)
-      ) : error ? (
-        <div>{error}</div>
-      ) : (
-        <div>No data</div>
-      )}
-    </div>
-  );
+    return (
+        <div className={styles.productList}>
+            {memoizedProducts.map((product) => (
+                <ProductCard key={product.id} product={product} />
+            ))}
+        </div>
+    );
 };
 
 export default ProductsList;

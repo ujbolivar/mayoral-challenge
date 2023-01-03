@@ -1,4 +1,4 @@
-export interface Product {
+export interface ProductData {
     product: {
         id: number;
         title: string;
@@ -11,4 +11,9 @@ export interface Product {
             count: number;
         }
     },
+}
+
+export interface ProductDataListProps {
+    productDataList: ProductData[];
+	error: boolean;
 }

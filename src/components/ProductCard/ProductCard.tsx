@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
-import { Product } from './ProductCard.interface';
+import { ProductData } from '../../types/product_data';
 import styles from './ProductCard.module.css';
 import ProductImage from 'components/ProductImage/ProductImage';
 import Button from '../Button/Button';
 
-const ProductCard = ({ product }: Product) => {
+const ProductCard = ({ product }: ProductData) => {
     const [discount, setDiscount] = useState({ active: false, value: 0 });
 
     useEffect(() => {
