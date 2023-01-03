@@ -3,7 +3,6 @@ import SearchBar from '../SearchBar/SearchBar';
 import SortControls from '../SortControls/SortControls';
 
 const NavBar = () => {
-
     const handleSearch = (searchTerm: string) => {
         console.log(searchTerm);
     };
@@ -17,10 +16,12 @@ const NavBar = () => {
     };
 
     return (
-        <nav className={styles.navBar}>
-            <SearchBar onSearch={handleSearch} />
-            <SortControls onSort={handleSort} />
-        </nav>
+        <div className={styles.container}>
+            <nav className={styles.navBar}>
+                <SearchBar onSearch={handleSearch} />
+                <SortControls onSort={handleSort} />
+            </nav>
+        </div>
     );
 };
 

@@ -1,5 +1,6 @@
 .Button {
     padding: 0.5rem 1rem;
+	margin-bottom: 10px;
     background-color: #4f9add;
     color: #ffffff;
     font-weight: 500;
@@ -15,6 +16,7 @@
 
 .ButtonAlt {
     background: none;
+	margin-bottom: 10px;
     border: none;
     font-size: 0.8rem;
     font-weight: 300;

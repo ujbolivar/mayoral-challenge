@@ -17,7 +17,7 @@ export const getStaticProps: GetStaticProps = async (_context) => {
 
 const HomePage: NextPage<ProductDataListProps> = ({ productDataList }: ProductDataListProps) => {
     return (
-        <main>
+        <main className={styles.page}>
             <Head>
                 <title>Mayoral</title>
             </Head>

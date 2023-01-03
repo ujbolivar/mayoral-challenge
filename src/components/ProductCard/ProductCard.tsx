@@ -22,7 +22,7 @@ const ProductCard = ({ product }: ProductData) => {
             <div className={styles.productPrice}>{product.price} €</div>
             {discount.active ? (
                 <div className={styles.discountPrice}>
-                    {(product.price - product.price * (discount.value / 100)).toFixed(2)} €(-
+                    {(product.price - product.price * (discount.value / 100)).toFixed(2)} € (-
                     {discount.value}%) €
                 </div>
             ) : <div className={styles.discountPrice}> </div> }
