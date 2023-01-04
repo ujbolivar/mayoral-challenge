@@ -23,6 +23,8 @@ const ProductPrice = ({ product }: ProductData) => {
         }
     };
 
+	//Set a discount value to certain items.
+
     useEffect(() => {
         if (product.id % 2 === 0) {
             setDiscount({ active: true, value: 20 });

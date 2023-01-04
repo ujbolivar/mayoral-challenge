@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { GetStaticProps, NextPage } from 'next';
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import NavBar from 'components/NavBar/NavBar';
 import ProductList from '../components/ProductList/ProductList';
 import { GetProducts } from '../lib/productData_api';
@@ -19,6 +19,10 @@ export const getStaticProps: GetStaticProps = async (_context) => {
 const HomePage: NextPage<ProductDataListProps> = ({ productDataList }: ProductDataListProps) => {
     const [query, setQuery] = useState('');
 
+	const memoizedProductList = useMemo(() => {
+		return productDataList
+	}, [productDataList])
+
     return (
         <main className={styles.page}>
             <Head>
@@ -26,10 +30,10 @@ const HomePage: NextPage<ProductDataListProps> = ({ productDataList }: ProductDa
                 <title>Mayoral</title>
             </Head>
             <header className={styles.header}>
-                <NavBar query={query} setQuery={setQuery} />
+                <NavBar setQuery={setQuery} />
             </header>
             <section>
-                <ProductList productsData={productDataList} query={query} />
+                <ProductList productsData={memoizedProductList} query={query} />
             </section>
         </main>
     );
