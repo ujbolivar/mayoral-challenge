@@ -5,7 +5,6 @@ const Document = () => {
     return (
         <Html lang="es">
             <Head>
-                <meta name="viewport" content="initial-scale=1, width=device-width" />
                 <Script src="https://cdn.jsdelivr.net/npm/container-query-polyfill@1/dist/container-query-polyfill.modern.js"></Script>
 				<link
                     rel="stylesheet"

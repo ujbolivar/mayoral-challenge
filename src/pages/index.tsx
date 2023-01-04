@@ -19,6 +19,7 @@ const HomePage: NextPage<ProductDataListProps> = ({ productDataList }: ProductDa
     return (
         <main className={styles.page}>
             <Head>
+				<meta name="viewport" content="initial-scale=1, width=device-width" />
                 <title>Mayoral</title>
             </Head>
             <header className={styles.header}>
