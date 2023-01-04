@@ -2,7 +2,7 @@ import styles from './SearchBar.module.css';
 import SearchIcon from '@mui/icons-material/Search';
 import { grey } from '@mui/material/colors';
 
-const SearchBar = (query, setQuery) => {
+const SearchBar = ({ setQuery }) => {
     return (
         <div className={styles.container}>
             <SearchIcon sx={{ color: grey[500] }} />
@@ -10,7 +10,7 @@ const SearchBar = (query, setQuery) => {
                 type="text"
                 className={styles.searchInput}
                 placeholder="Buscar"
-                value={query}
+                // value={query}
                 onChange={(e) => setQuery(e.target.value)}
             />
         </div>

@@ -2,10 +2,7 @@ import styles from './NavBar.module.css';
 import SearchBar from '../SearchBar/SearchBar';
 import SortControls from '../SortControls/SortControls';
 
-const NavBar = () => {
-    const handleSearch = (searchTerm: string) => {
-        console.log(searchTerm);
-    };
+const NavBar = ({ setQuery }) => {
 
     const handleSort = (sortMethod: 'asc' | 'desc') => {
         sortMethod === 'asc'
@@ -18,7 +15,7 @@ const NavBar = () => {
     return (
         <div className={styles.container}>
             <nav className={styles.navBar}>
-                <SearchBar onSearch={handleSearch} />
+                <SearchBar setQuery={setQuery} />
                 <SortControls onSort={handleSort} />
             </nav>
         </div>
