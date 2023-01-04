@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import styles from './ProductImage.module.css';
 
 const keyStr = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';
 
@@ -19,17 +20,19 @@ const myLoader = ({ src, width }) => {
 
 const ProductImage = ({ src, alt }) => {
     return (
-        <Image
-            alt={alt}
-            loader={myLoader}
-            src={src}
-            width={100}
-            height={100}
-            priority={true}
-            layout="responsive"
-            placeholder="blur"
-            blurDataURL={rgbDataURL(128, 220, 243)}
-        />
+        <div className={styles.imageContainer}>
+            <Image
+                alt={alt}
+                loader={myLoader}
+                src={src}
+                width={100}
+                height={100}
+                priority={true}
+                layout="responsive"
+                placeholder="blur"
+                blurDataURL={rgbDataURL(128, 220, 243)}
+            />
+        </div>
     );
 };
 
