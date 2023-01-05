@@ -18,6 +18,7 @@ export const getStaticProps: GetStaticProps = async (_context) => {
 
 const HomePage: NextPage<ProductDataListProps> = ({ productDataList }: ProductDataListProps) => {
     const [query, setQuery] = useState('');
+	const [order, setOrder] = useState('');
 
 	const memoizedProductList = useMemo(() => {
 		return productDataList
@@ -30,10 +31,10 @@ const HomePage: NextPage<ProductDataListProps> = ({ productDataList }: ProductDa
                 <title>Mayoral</title>
             </Head>
             <header className={styles.header}>
-                <NavBar setQuery={setQuery} />
+                <NavBar setQuery={setQuery} setOrder={setOrder}/>
             </header>
             <section>
-                <ProductList productsData={memoizedProductList} query={query} />
+                <ProductList productsData={memoizedProductList} query={query} order={order} />
             </section>
         </main>
     );

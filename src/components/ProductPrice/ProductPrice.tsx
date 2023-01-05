@@ -13,7 +13,7 @@ const ProductPrice = ({ product }: ProductData) => {
                         {product.price} €
                     </div>
                     {(product.price - product.price * (discount.value / 100)).toFixed(2)} € (-
-                    {discount.value}%) €
+                    {discount.value}%)
                 </div>
             );
         } else {

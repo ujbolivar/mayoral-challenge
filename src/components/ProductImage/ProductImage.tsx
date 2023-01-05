@@ -25,12 +25,12 @@ const ProductImage = ({ src, alt }) => {
                 alt={alt}
                 loader={myLoader}
                 src={src}
-                width={100}
-                height={100}
-                priority={true}
+                width={300}
+                height={300}
                 layout="responsive"
                 placeholder="blur"
                 blurDataURL={rgbDataURL(128, 220, 243)}
+				quality={20}
             />
         </div>
     );

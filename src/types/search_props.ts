@@ -1,3 +1,3 @@
 export interface SearchProps {
-    onSearch: (query: string) => void;
+    setQuery: (query: string) => void;
 }
