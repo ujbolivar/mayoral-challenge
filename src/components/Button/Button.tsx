@@ -1,17 +1,20 @@
-import { useEffect, useMemo } from 'react';
 import styles from './Button.module.css';
 
-const Button = ({ variant, text }) => {
+const Button = ({ category, variant, text }) => {
     return (
         <>
-            {variant === 'button' ? (
-                <button className={styles.Button} value={text} >
-				{text}
-				</button>
+            {category === 'electronics' && variant === 'buttonAlt' ?(
+                <button className={styles.ButtonNone} value={text}>
+                    {text}
+                </button>
+            ) : variant === 'button' ? (
+                <button className={styles.Button} value={text}>
+                    {text}
+                </button>
             ) : variant === 'buttonAlt' ? (
-                <button className={styles.ButtonAlt} value={text} >
-				{text}
-				</button>
+                <button className={styles.ButtonAlt} value={text}>
+                    {text}
+                </button>
             ) : (
                 <></>
             )}
