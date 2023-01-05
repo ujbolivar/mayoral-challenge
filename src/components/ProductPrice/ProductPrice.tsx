@@ -6,22 +6,20 @@ const ProductPrice = ({ product }: ProductData) => {
     const [discount, setDiscount] = useState({ active: false, value: 0 });
 
     const renderResult = useMemo(() => {
-			if (discount.active) {
-				return (
-					<div className={styles.discountPrice}>
-						<div className={`${styles.productPrice}, ${styles.productPriceSlashed}`}>
-							{product.price} €
-						</div>
-						{(product.price - product.price * (discount.value / 100)).toFixed(2)} € (-
-						{discount.value}%)
-					</div>
-				);
-			} else {
-				return (
-						<div className={styles.productPrice}>{product.price} €</div>
-				);
-			}
-		}, [discount, product.price]);
+        if (discount.active) {
+            return (
+                <div className={styles.discountPrice}>
+                    <div className={`${styles.productPrice}, ${styles.productPriceSlashed}`}>
+                        {product.price} €
+                    </div>
+                    {(product.price - product.price * (discount.value / 100)).toFixed(2)} € (-
+                    {discount.value}%)
+                </div>
+            );
+        } else {
+            return <div className={styles.productPrice}>{product.price} €</div>;
+        }
+    }, [discount, product.price]);
 
     useEffect(() => {
         if (product.id % 2 === 0) {

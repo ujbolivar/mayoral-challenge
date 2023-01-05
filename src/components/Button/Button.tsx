@@ -3,7 +3,7 @@ import styles from './Button.module.css';
 const Button = ({ name, category, variant, text }) => {
     return (
         <>
-            {category === 'electronics' && variant === 'buttonAlt' ?(
+            {category === 'electronics' && variant === 'buttonAlt' ? (
                 <button className={styles.ButtonNone} value={text}>
                     {text}
                 </button>

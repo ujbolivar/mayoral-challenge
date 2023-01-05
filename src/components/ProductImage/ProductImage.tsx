@@ -30,7 +30,7 @@ const ProductImage = ({ src, alt }) => {
                 layout="responsive"
                 placeholder="blur"
                 blurDataURL={rgbDataURL(128, 220, 243)}
-				quality={20}
+                quality={20}
             />
         </div>
     );

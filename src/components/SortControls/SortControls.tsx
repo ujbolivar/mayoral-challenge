@@ -23,12 +23,18 @@ const Sort = ({ setOrder }: SortProps) => {
 
     return (
         <div className={styles.sort}>
-            <button name="Orden productos por nombre en orden descendiente" onClick={() => handleChange('desc')}>
+            <button
+                name="Orden productos por nombre en orden descendiente"
+                onClick={() => handleChange('desc')}
+            >
                 <RemoveIcon
                     sx={{ color: grey[desc], fontSize: 50, strokeWidth: 3, stroke: grey[desc] }}
                 />
             </button>
-            <button name="Ordenar productos por nombre en orden ascendiente" onClick={() => handleChange('asc')}>
+            <button
+                name="Ordenar productos por nombre en orden ascendiente"
+                onClick={() => handleChange('asc')}
+            >
                 <AddIcon
                     sx={{ color: grey[asc], fontSize: 50, strokeWidth: 3, stroke: grey[asc] }}
                 />

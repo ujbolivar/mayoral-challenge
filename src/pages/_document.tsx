@@ -6,7 +6,7 @@ const Document = () => {
         <Html lang="es">
             <Head>
                 <Script src="https://cdn.jsdelivr.net/npm/container-query-polyfill@1/dist/container-query-polyfill.modern.js"></Script>
-				<link
+                <link
                     rel="stylesheet"
                     href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
                 />

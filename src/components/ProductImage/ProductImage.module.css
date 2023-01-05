@@ -1,8 +1,8 @@
 .imageContainer {
-	display: block;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center center;
-	width: 100%;
-	filter: contrast(175%) brightness(90%);
+    display: block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    filter: contrast(175%) brightness(90%);
 }

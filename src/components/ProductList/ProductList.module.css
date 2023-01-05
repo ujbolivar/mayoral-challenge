@@ -28,17 +28,17 @@
 }
 
 @container (max-width: 425px) {
-	.productList {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(7.5rem, 2fr));
-		grid-gap: 0.5rem;
-	}
+    .productList {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(7.5rem, 2fr));
+        grid-gap: 0.5rem;
+    }
 }
 
 @container (max-width: 375px) {
-	.productList {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(6.5rem, 2fr));
-		grid-gap: 0.5rem;
-	}
+    .productList {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(6.5rem, 2fr));
+        grid-gap: 0.5rem;
+    }
 }

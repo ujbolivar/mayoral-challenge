@@ -9,11 +9,11 @@ export interface ProductData {
         rating: {
             rate: number;
             count: number;
-        }
-    },
+        };
+    };
 }
 
 export interface ProductDataListProps {
-    productDataList: ProductData[];
-	error: boolean;
+    productsData: ProductData[];
+    error: boolean;
 }

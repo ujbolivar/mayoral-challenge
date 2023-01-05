@@ -5,8 +5,7 @@ import Sort from '../../utils/sort';
 import styles from './ProductList.module.css';
 
 const ProductsList = ({ productsData, query, order }) => {
-
-    const filteredProducts = useCallback(
+    const transformedProductsData = useCallback(
         () => Sort(Search(productsData, query), order),
         [productsData, query, order],
     );
@@ -14,7 +13,7 @@ const ProductsList = ({ productsData, query, order }) => {
     return (
         <div className={styles.page}>
             <div className={styles.productList}>
-                {filteredProducts().map((product) => (
+                {transformedProductsData().map((product) => (
                     <ProductCard key={product.id} product={product} />
                 ))}
             </div>

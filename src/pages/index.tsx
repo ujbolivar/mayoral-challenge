@@ -11,19 +11,19 @@ export const getStaticProps: GetStaticProps = async (_context) => {
     const products: ProductData[] = await GetProducts();
     return {
         props: {
-            productDataList: products,
+            productsData: products,
         },
-		revalidate: 60,
+        revalidate: 60,
     };
 };
 
-const HomePage: NextPage<ProductDataListProps> = ({ productDataList }: ProductDataListProps) => {
+const HomePage: NextPage<ProductDataListProps> = ({ productsData }: ProductDataListProps) => {
     const [query, setQuery] = useState('');
-	const [order, setOrder] = useState('');
+    const [order, setOrder] = useState('');
 
-	const memoizedProductList = useMemo(() => {
-		return <ProductList productsData={productDataList} query={query} order={order} />
-	}, [productDataList, query, order])
+    const memoizedProductsData = useMemo(() => {
+        return <ProductList productsData={productsData} query={query} order={order} />;
+    }, [productsData, query, order]);
 
     return (
         <main className={styles.page}>
@@ -32,11 +32,9 @@ const HomePage: NextPage<ProductDataListProps> = ({ productDataList }: ProductDa
                 <title>Mayoral</title>
             </Head>
             <header className={styles.header}>
-                <NavBar setQuery={setQuery} setOrder={setOrder}/>
+                <NavBar setQuery={setQuery} setOrder={setOrder} />
             </header>
-            <section>
-				{memoizedProductList}
-            </section>
+            <section>{memoizedProductsData}</section>
         </main>
     );
 };

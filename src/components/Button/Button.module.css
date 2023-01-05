@@ -21,16 +21,16 @@
 }
 
 .ButtonAlt:hover,
-.ButtonAlt:active  {
+.ButtonAlt:active {
     color: #ccc;
 }
 
 .ButtonNone {
-	visibility: hidden;
+    visibility: hidden;
 }
 
 @container (min-width: 600px) {
-	.Button {
-		margin-bottom: 1rem;
-	}
+    .Button {
+        margin-bottom: 1rem;
+    }
 }

@@ -1,5 +1,3 @@
-// import { ProductData } from '../types/product_data';
-
 function Sort(list, order: 'asc' | 'desc') {
     return list.sort((a, b) => {
         const titleA = a.title.toLowerCase();

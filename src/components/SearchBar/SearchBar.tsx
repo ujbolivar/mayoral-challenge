@@ -8,10 +8,10 @@ const SearchBar = ({ setQuery }: SearchProps) => {
     const inputRef = useRef(null);
 
     const handleChange = () => {
-		setTimeout(() => {
-			setQuery(inputRef.current.value);
-		}, 500);
-	}
+        setTimeout(() => {
+            setQuery(inputRef.current.value);
+        }, 500);
+    };
 
     return (
         <div className={styles.container}>

@@ -3,7 +3,6 @@ import SearchBar from '../SearchBar/SearchBar';
 import SortControls from '../SortControls/SortControls';
 
 const NavBar = ({ setQuery, setOrder }) => {
-
     return (
         <div className={styles.container}>
             <nav className={styles.navBar}>
