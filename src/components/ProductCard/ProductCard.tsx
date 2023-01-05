@@ -5,6 +5,10 @@ import ProductPrice from 'components/ProductPrice/ProductPrice';
 import Button from '../Button/Button';
 
 const ProductCard = ({ product }: ProductData) => {
+
+	const añadir = console.log(`el usuario ha añadido ${product.title} al carrito`);
+	const colores = console.log(`El usuario desea ver el producto ${product.title} en otros colores`);
+
     return (
         <div className={styles.productCard}>
             <ProductImage src={product.image} alt="imagen de producto" />
@@ -15,8 +19,9 @@ const ProductCard = ({ product }: ProductData) => {
                 category={product.category}
                 variant="buttonAlt"
                 text="más colores"
+				action={colores}
             />
-            <Button name="Añadir" category={product.category} variant="button" text="AÑADIR" />
+            <Button name="Añadir" category={product.category} variant="button" text="AÑADIR" action={añadir}/>
         </div>
     );
 };
