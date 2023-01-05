@@ -1,7 +1,7 @@
-import { ProductData } from '../types/product_data';
+import { Product } from '../types/product_data';
 
-function Search(list, query: string) {
-    return list.filter((product): ProductData[] => {
+function Search(list: Product[], query: string) {
+    return list.filter((product) => {
         return product.title.toLowerCase().includes(query.toLowerCase());
     });
 }

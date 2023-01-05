@@ -4,16 +4,15 @@ const Button = ({ name, category, variant, text, action }) => {
     return (
         <>
             {category === 'electronics' && variant === 'buttonAlt' ? (
-                <button className={styles.ButtonNone} value={text} onClick={action}>
+                <button className={styles.ButtonNone} value={text} onClick={() => console.log(action)}>
                     {text}
                 </button>
             ) : variant === 'button' ? (
-                <button name={name} className={styles.Button} value={text} onClick={action}>
+                <button name={name} className={styles.Button} value={text} onClick={() => console.log(action)}>
                     {text}
                 </button>
             ) : variant === 'buttonAlt' ? (
-                <button name={name} className={styles.ButtonAlt} value={text} onClick={action}>
-					{action}
+                <button name={name} className={styles.ButtonAlt} value={text} onClick={() => console.log(action)}>
                     {text}
                 </button>
             ) : (

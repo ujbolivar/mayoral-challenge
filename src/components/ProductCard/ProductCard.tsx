@@ -6,8 +6,8 @@ import Button from '../Button/Button';
 
 const ProductCard = ({ product }: ProductData) => {
 
-	const añadir = console.log(`el usuario ha añadido ${product.title} al carrito`);
-	const colores = console.log(`El usuario desea ver el producto ${product.title} en otros colores`);
+	const añadir = `el usuario ha añadido ${product.title} al carrito`;
+	const colores = `El usuario desea ver el producto ${product.title} en otros colores`;
 
     return (
         <div className={styles.productCard}>
