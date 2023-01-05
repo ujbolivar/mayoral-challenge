@@ -21,8 +21,8 @@ const HomePage: NextPage<ProductDataListProps> = ({ productDataList }: ProductDa
 	const [order, setOrder] = useState('');
 
 	const memoizedProductList = useMemo(() => {
-		return productDataList
-	}, [productDataList])
+		return <ProductList productsData={productDataList} query={query} order={order} />
+	}, [productDataList, query, order])
 
     return (
         <main className={styles.page}>
@@ -34,7 +34,7 @@ const HomePage: NextPage<ProductDataListProps> = ({ productDataList }: ProductDa
                 <NavBar setQuery={setQuery} setOrder={setOrder}/>
             </header>
             <section>
-                <ProductList productsData={memoizedProductList} query={query} order={order} />
+				{memoizedProductList}
             </section>
         </main>
     );
