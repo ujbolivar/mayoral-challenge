@@ -6,8 +6,6 @@ import Button from '../Button/Button';
 
 const ProductCard = ({ product }: ProductData) => {
 
-	console.log(product.category);
-
     return (
         <div className={styles.productCard}>
 			<ProductImage src={product.image} alt="imagen de producto" />
