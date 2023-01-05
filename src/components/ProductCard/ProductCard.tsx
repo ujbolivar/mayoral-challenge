@@ -11,8 +11,8 @@ const ProductCard = ({ product }: ProductData) => {
 			<ProductImage src={product.image} alt="imagen de producto" />
             <h3 className={styles.productTitle}>{product.title}</h3>
 			<ProductPrice product={product} />
-			<Button category={product.category} variant="buttonAlt" text="más colores" />
-            <Button category={product.category} variant="button" text="AÑADIR" />
+			<Button name="más colores" category={product.category} variant="buttonAlt" text="más colores" />
+            <Button name="Añadir" category={product.category} variant="button" text="AÑADIR" />
         </div>
     );
 };

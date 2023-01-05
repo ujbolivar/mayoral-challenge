@@ -1,6 +1,6 @@
 import styles from './Button.module.css';
 
-const Button = ({ category, variant, text }) => {
+const Button = ({ name, category, variant, text }) => {
     return (
         <>
             {category === 'electronics' && variant === 'buttonAlt' ?(
@@ -8,11 +8,11 @@ const Button = ({ category, variant, text }) => {
                     {text}
                 </button>
             ) : variant === 'button' ? (
-                <button className={styles.Button} value={text}>
+                <button name={name} className={styles.Button} value={text}>
                     {text}
                 </button>
             ) : variant === 'buttonAlt' ? (
-                <button className={styles.ButtonAlt} value={text}>
+                <button name={name} className={styles.ButtonAlt} value={text}>
                     {text}
                 </button>
             ) : (
