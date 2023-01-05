@@ -2,10 +2,10 @@ import Head from 'next/head';
 import { GetStaticProps, NextPage } from 'next';
 import { useMemo, useState } from 'react';
 import NavBar from 'components/NavBar/NavBar';
-import ProductList from '../components/ProductList/ProductList';
-import { GetProducts } from '../lib/productData_api';
-import { ProductData, ProductDataListProps } from '../types/product_data';
-import styles from '../styles/home.module.css';
+import ProductList from 'components/ProductList/ProductList';
+import { GetProducts } from 'lib/productData_api';
+import styles from 'styles/home.module.css';
+import { ProductData, ProductDataListProps } from 'types/product_data';
 
 export const getStaticProps: GetStaticProps = async (_context) => {
     const products: ProductData[] = await GetProducts();

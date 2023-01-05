@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import { SortProps } from 'types/sort_props';
-import styles from './SortControls.module.css';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 import { grey } from '@mui/material/colors';
+import styles from './SortControls.module.css';
+import { SortProps } from 'types/sort_props';
 
 const Sort = ({ setOrder }: SortProps) => {
     const [desc, setDesc] = useState(200);

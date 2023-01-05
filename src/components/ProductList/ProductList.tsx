@@ -1,10 +1,10 @@
 import { useCallback } from 'react';
-import ProductCard from '../ProductCard/ProductCard';
-import Search from '../../utils/search';
-import Sort from '../../utils/sort';
+import ProductCard from 'components/ProductCard/ProductCard';
 import styles from './ProductList.module.css';
+import Search from 'utils/search';
+import Sort from 'utils/sort';
 
-const ProductsList = ({ productsData, query, order }) => {
+const ProductList = ({ productsData, query, order }) => {
     const transformedProductsData = useCallback(
         () => Sort(Search(productsData, query), order),
         [productsData, query, order],
@@ -21,4 +21,4 @@ const ProductsList = ({ productsData, query, order }) => {
     );
 };
 
-export default ProductsList;
+export default ProductList;

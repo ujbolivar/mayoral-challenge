@@ -1,8 +1,8 @@
 import { useRef } from 'react';
-import { SearchProps } from 'types/search_props';
-import styles from './SearchBar.module.css';
 import SearchIcon from '@mui/icons-material/Search';
 import { grey } from '@mui/material/colors';
+import styles from './SearchBar.module.css';
+import { SearchProps } from 'types/search_props';
 
 const SearchBar = ({ setQuery }: SearchProps) => {
     const inputRef = useRef(null);
@@ -17,9 +17,9 @@ const SearchBar = ({ setQuery }: SearchProps) => {
         <div className={styles.container}>
             <SearchIcon sx={{ color: grey[500] }} />
             <input
-                type="text"
+                type='text'
                 className={styles.searchInput}
-                placeholder="Buscar"
+                placeholder='Buscar'
                 ref={inputRef}
                 onChange={handleChange}
             />

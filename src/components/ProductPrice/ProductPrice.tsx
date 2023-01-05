@@ -1,6 +1,6 @@
 import { useMemo, useEffect, useState } from 'react';
 import styles from './ProductPrice.module.css';
-import { ProductData } from '../../types/product_data';
+import { ProductData } from 'types/product_data';
 
 const ProductPrice = ({ product }: ProductData) => {
     const [discount, setDiscount] = useState({ active: false, value: 0 });

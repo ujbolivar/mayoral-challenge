@@ -5,22 +5,22 @@ html {
 }
 
 * {
-	box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	font-family: Roboto, Quicksand, cursive;
-	font-size: 1rem;
-	font-weight: 400;
-	color: #212121;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-family: Roboto, Quicksand, cursive;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #212121;
 }
 
 @container (max-width: 500px) {
     * {
-		font-size: 0.8rem;
-	}
+        font-size: 0.8rem;
+    }
 }
 
 @container (max-width: 350px) {
     * {
-		font-size: 0.7rem;
-	}
+        font-size: 0.7rem;
+    }
 }

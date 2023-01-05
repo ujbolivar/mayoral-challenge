@@ -1,6 +1,6 @@
+import SearchBar from 'components/SearchBar/SearchBar';
+import SortControls from 'components/SortControls/SortControls';
 import styles from './NavBar.module.css';
-import SearchBar from '../SearchBar/SearchBar';
-import SortControls from '../SortControls/SortControls';
 
 const NavBar = ({ setQuery, setOrder }) => {
     return (
