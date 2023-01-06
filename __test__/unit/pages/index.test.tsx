@@ -1,10 +1,12 @@
 import { render, screen } from '@testing-library/react';
-import HomePage from 'pages/index';
 import '@testing-library/jest-dom';
+import HomePage from '../../../src/pages/index';
+import MOCK_PRODUCTS from '../mock_products';
 
-describe('Home', () => {
+
+describe('HomePage', () => {
     it('renders a heading', () => {
-        render(<HomePage />);
+        render(<HomePage productsData={MOCK_PRODUCTS as any} />);
 
         const heading = screen.getByRole('heading', {
             name: /welcome to next\.js!/i,

@@ -1,4 +1,6 @@
-function Sort(list, order: 'asc' | 'desc') {
+import { Product } from 'types/product_data';
+
+function Sort(list: Product[], order: 'asc' | 'desc') {
     return list.sort((a, b) => {
         const titleA = a.title.toLowerCase();
         const titleB = b.title.toLowerCase();

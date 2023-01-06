@@ -6,7 +6,6 @@ const Button = ({ name, category, variant, text, action }) => {
             {category === 'electronics' && variant === 'buttonAlt' ? (
                 <button
                     className={styles.ButtonNone}
-                    value={text}
                     onClick={() => console.log(action)}
                 >
                     {text}
@@ -15,7 +14,6 @@ const Button = ({ name, category, variant, text, action }) => {
                 <button
                     name={name}
                     className={styles.Button}
-                    value={text}
                     onClick={() => console.log(action)}
                 >
                     {text}
@@ -24,7 +22,6 @@ const Button = ({ name, category, variant, text, action }) => {
                 <button
                     name={name}
                     className={styles.ButtonAlt}
-                    value={text}
                     onClick={() => console.log(action)}
                 >
                     {text}

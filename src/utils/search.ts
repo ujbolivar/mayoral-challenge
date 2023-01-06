@@ -1,4 +1,4 @@
-import { Product } from '../types/product_data';
+import { Product } from 'types/product_data';
 
 function Search(list: Product[], query: string) {
     return list.filter((product) => {

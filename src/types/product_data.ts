@@ -16,5 +16,4 @@ export interface ProductData {
 
 export interface ProductDataListProps {
     productsData: ProductData[];
-    error: boolean;
 }
