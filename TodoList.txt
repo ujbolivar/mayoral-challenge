@@ -25,7 +25,7 @@ PENDIENTE
 	
 	- end to end tests - write all the end tests you need.
 		
-		User Actions:
+		User Actions: (maybe try with @testing-library/user-events. You need @testing-library/dom for this to work.)
 			- Can request the page and have it load
 			- Can input tt text into search
 			- Can press sort control buttons
