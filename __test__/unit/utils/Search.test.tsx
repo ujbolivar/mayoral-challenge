@@ -3,7 +3,7 @@ import { Product } from 'types/product_data';
 import MOCK_PRODUCTS from '../mock_products';
 
 describe('Search products with Search function', () => {
-    test('Search products in ascending order', () => {
+    test('Search products in with input AaaAZazZz. Input lower/uppercase should not have to be an explicit match to the product title.', () => {
         const result: Product[] = [
             {
                 id: 1,
@@ -18,7 +18,7 @@ describe('Search products with Search function', () => {
                 },
             },
         ];
-        expect(Search(MOCK_PRODUCTS, 'AaAaZazZZ')).toStrictEqual(result);
+        expect(Search(MOCK_PRODUCTS, 'AaaAZazZz')).toStrictEqual(result);
     });
 
     test('Search products in with input ZzZAaA. Input lower/uppercase should not have to be an explicit match to the product title.', () => {
