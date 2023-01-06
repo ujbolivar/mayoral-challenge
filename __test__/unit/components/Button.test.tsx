@@ -4,7 +4,7 @@ import Button from 'components/Button/Button';
 describe('Render Button component', () => {
     test("Render 'Añadir' Button and press it", async () => {
         const btnOnClick = jest.fn();
-        render(
+        render( 
             <Button
                 text="testButton"
                 action={btnOnClick}
