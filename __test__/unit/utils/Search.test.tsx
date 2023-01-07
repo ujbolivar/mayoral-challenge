@@ -1,5 +1,5 @@
-import Search from '../../../src/utils/search';
-import { Product } from 'types/product_data';
+import { Search } from 'utils/all_utils';
+import { Product } from 'types/all_typedefs';
 import MOCK_PRODUCTS from '../mock_products';
 
 describe('Search products with Search function', () => {

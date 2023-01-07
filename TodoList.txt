@@ -5,13 +5,7 @@ PENDIENTE
 	REFACTOR:
 	
 	- discount function inside product price useeffect needs to be a pure function and 
-	extracted 
-	
-	- añadir and mas colores text to be put inside separate files inside utils with their 
-	console.log and imported into product card , stored in constant variables and then be 
-	given to the button actions attribute.
-	
-	- from the component and placed into utils/applyDiscount	
+	extracted from the component and placed into utils/applyDiscount	
 	
 	SET THE MOCK PRODUCTS CORRECTLY FOR JEST INSIDE __mocks__ folder
 
@@ -91,8 +85,7 @@ HECHO
 
 	- si el productos no es de categoria 'electronics' no mostrar 'mas colores' - DONE
 
-	- BUG: Product card dimensions change to fit entire screen when search returns few items. - 
-	DONE
+	- BUG: Product card dimensions change to fit entire screen when search returns few items. - DONE
 	
 	- Refactorizar component imagen. - DONE
 
@@ -111,14 +104,22 @@ HECHO
 
 	ACCIONES:
 		- API call - DONE		
-		- Do not memoize inside the product list? - DONE
+		- Memoize after api call promise response and static generation - DONE
+		- Set revalidate to 1 minute
 		- Search over list -DONE
 		- Sort list - DONE
-		- use sortOrder variable for the sort stuff -DONE
+		- use sortOrder to apply sort direction on button press -DONE
 		- Add useMemo to the set Disocunt function in useEffect -DONE
 
+	REFACTOR:
+	
+		- Do not memoize inside the product list? - DONE
+		- añadir and mas colores text to be put inside separate files inside utils with their 
+		console.log and imported into product card , stored in constant variables and then be 
+		given to the button actions attribute.
+	
 	TESTS:
 	
-	- end to end tests
-		- test pure functions search and sort - DONE
-		- añadir button renders and is clickable - DONE
+		- end to end tests
+			- test pure functions search and sort - DONE
+			- añadir button renders and is clickable - DONE

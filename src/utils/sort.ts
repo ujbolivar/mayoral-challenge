@@ -1,16 +1,11 @@
-import { Product } from 'types/product_data';
+import { setOrder } from '@/types/all_typedefs';
 
-function Sort(list: Product[], order: 'asc' | 'desc') {
+// Sorts the list of products based on the order passed as a prop.
+
+export const Sort: setOrder = (list, order) => {
     return list.sort((a, b) => {
-        const titleA = a.title.toLowerCase();
-        const titleB = b.title.toLowerCase();
-        if (order === 'desc') {
-            return titleB.localeCompare(titleA);
-        }
-        if (order === 'asc') {
-            return titleA.localeCompare(titleB);
-        }
+        const titleA: string = a.title.toLowerCase();
+        const titleB: string = b.title.toLowerCase();
+        return order === 'desc' ? titleB.localeCompare(titleA) : titleA.localeCompare(titleB);
     });
-}
-
-export default Sort;
+};

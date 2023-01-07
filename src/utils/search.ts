@@ -1,9 +1,5 @@
-import { Product } from 'types/product_data';
+import { Product, setQuery } from '@/types/all_typedefs';
 
-function Search(list: Product[], query: string) {
-    return list.filter((product) => {
-        return product.title.toLowerCase().includes(query.toLowerCase());
-    });
-}
-
-export default Search;
+export const Search: setQuery = (list, query) => {
+    return list.filter(({ title }: Product) => title.toLowerCase().includes(query.toLowerCase()));
+};
