@@ -1,31 +1,32 @@
 import { useMemo, useEffect, useState } from 'react';
 import styles from './ProductPrice.module.css';
 import { ProductData } from 'types/product_data';
+import { handleDiscount } from 'helpers/handleDiscount';
 
 const ProductPrice = ({ product }: ProductData) => {
-    const [discount, setDiscount] = useState({ active: false, value: 0 });
+    const discount = 20;
+    const [flag, setFlag] = useState(false);
+    const [total, setTotal] = useState(0);
 
     const renderResult = useMemo(() => {
-        if (discount.active) {
+        if (flag) {
             return (
                 <div className={styles.discountPrice}>
                     <div className={`${styles.productPrice}, ${styles.productPriceSlashed}`}>
                         {product.price} €
                     </div>
-                    {(product.price - product.price * (discount.value / 100)).toFixed(2)} € (-
-                    {discount.value}%)
+                    {total} € (-
+                    {discount}%)
                 </div>
             );
         } else {
             return <div className={styles.productPrice}>{product.price} €</div>;
         }
-    }, [discount, product.price]);
+    }, [flag, product]);
 
     useEffect(() => {
-        if (product.id % 2 === 0) {
-            setDiscount({ active: true, value: 20 });
-        }
-    }, [product.id]);
+        handleDiscount(product.id, product.price, discount, setFlag, setTotal);
+    }, [product]);
 
     return <div className={styles.container}>{renderResult}</div>;
 };

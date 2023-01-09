@@ -9,7 +9,7 @@ PENDIENTE
 	- discount function inside product price useeffect needs to be a pure function and 
 	extracted from the component and placed into utils/applyDiscount	
 	
-	- SET THE MOCK PRODUCTS CORRECTLY FOR JEST INSIDE __mocks__ folder
+
 	
 	TESTS:
 
@@ -19,7 +19,6 @@ PENDIENTE
 			- productPrice component renders
 			- search component renders
 			- sort component renders and buttons are clickable
-			- colores button / hide colores button
 	
 	- E2E tests - Cypress
 	
@@ -39,30 +38,7 @@ PENDIENTE
 			- test api call
 			- NavBar component renders
 			- ProductCard component renders
-			- ProductList component renders
-
-	
-
-	TEST PULLED FROM CHAT GPT
-	
-	1. Test that the component correctly renders the data received from the API using 
-	getStaticProps.
-	2. Test that the component correctly handles errors when the API call fails.
-	3. Test that the component correctly displays a loading state while the data is being 
-	fetched from the API.
-	4. Test that the component correctly handles a change in the API data and updates the 
-	display accordingly.
-	5. Test that the component correctly handles user interactions, such as clicking on a 
-	button or filling out a form.
-	6. Test that the component correctly performs a new API call when the refresh prop is set 
-	to true.
-	7. Test that the component correctly cancels the API call when the component is unmounted.
-	8. Test that the component correctly displays a "No data found" message when the API 
-	returns an empty array.
-	9. Test that the component correctly passes the necessary props to its children components.
-	10. Test that the component's output is the same across different browsers and devices 
-	using snapshots.
-
+			- ProductList component renders	
 
 HECHO
 
@@ -116,7 +92,7 @@ HECHO
 		- Add useMemo to the set Disocunt function in useEffect -DONE
 
 	REFACTOR:
-	
+		- SET THE MOCK PRODUCTS CORRECTLY FOR JEST INSIDE __mocks__ folder - DONE
 		- Do not memoize inside the product list? - DONE
 		- añadir and mas colores text to be put inside separate files inside utils with their 
 		console.log and imported into product card , stored in constant variables and then be 
@@ -127,3 +103,4 @@ HECHO
 		- end to end tests
 			- test pure functions search and sort - DONE
 			- añadir button renders and is clickable - DONE
+			- colores button / hide colores button - DONE
