@@ -19,11 +19,11 @@ const handlePayload: HandlePayload = (title) => {
 
 const assignPayload: AssignPayload = (action, payload) => payload[action];
 
-// Receives the payload and prepares to log in the console
+// Logs payload in the console
 
 const printPayload: PrintPayload = (payload) => console.log(payload);
 
-// Receives the print and assign functions
+// Receives the action and the product title, passing it on to the other functions to complete the buttonAction sequence
 
 export const logPayload: LogPayload = (action, title) => {
     printPayload(assignPayload(action, handlePayload(title)) as unknown as Message);

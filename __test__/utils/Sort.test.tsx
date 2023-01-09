@@ -5,7 +5,7 @@ import MOCK_PRODUCTS from '../mock_products';
 describe('Sort products with Sort function', () => {
     test('Sort products in ascending order', () => {
         const result: Product[] = [
-			{
+            {
                 id: 1,
                 title: 'AaAaZazZZ',
                 price: 100,
@@ -17,7 +17,7 @@ describe('Sort products with Sort function', () => {
                     count: 12,
                 },
             },
-			{
+            {
                 id: 0,
                 title: 'kKKazzazZ',
                 price: 10,
