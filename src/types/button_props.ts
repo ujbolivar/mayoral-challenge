@@ -15,13 +15,12 @@ export interface Payload {
 
 // Interface that represents the handlePayload function
 export interface HandlePayload {
-    ({ title }: Product): Payload;
+    (title: string): Payload;
 }
-
 // Interface that represents the handlePayload function
 
 export interface AssignPayload {
-    (action: Action, title: Product, handlePayload: HandlePayload): Message;
+    (action: Action, payload: Payload): Message;
 }
 
 // Interface that represents the printAction function
@@ -33,5 +32,5 @@ export interface PrintPayload {
 // Interface that represents the logAction function
 
 export interface LogPayload {
-    (print: PrintPayload, assign: AssignPayload): void;
+    (action: Action, title: string): void;
 }
