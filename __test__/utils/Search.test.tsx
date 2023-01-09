@@ -1,6 +1,6 @@
 import { Search } from 'utils/all_utils';
 import { Product } from 'types/all_typedefs';
-import MOCK_PRODUCTS from '../mock_products';
+import MOCK_PRODUCTS from '../../__mocks__/mock_products';
 
 describe('Search products with Search function', () => {
     test('Search products in with input AaaAZazZz. Input lower/uppercase should not have to be an explicit match to the product title.', () => {

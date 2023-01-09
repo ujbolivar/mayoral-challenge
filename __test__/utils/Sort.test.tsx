@@ -1,6 +1,6 @@
 import { Sort } from 'utils/all_utils';
 import { Product } from 'types/all_typedefs';
-import MOCK_PRODUCTS from '../mock_products';
+import MOCK_PRODUCTS from '../../__mocks__/mock_products';
 
 describe('Sort products with Sort function', () => {
     test('Sort products in ascending order', () => {
