@@ -16,6 +16,7 @@ Maquetar las imágenes adjuntas y tener en cuenta los diferentes cortes en móvi
 - Separa en componentes de una forma óptima y organizada 	                                  :heavy_check_mark:
 
 :pushpin: Implemente todos los componentes que crei necesarios para este challenge.
+
 :pushpin: Mantener los componentes secos limmitando la logica interna en lo posible.
 
 - La vista debe asemejarse lo más parecido posible a las fotos adjuntas 	                  :heavy_check_mark:
@@ -36,9 +37,9 @@ Maquetar las imágenes adjuntas y tener en cuenta los diferentes cortes en móvi
 
 :pushpin: Responsive en todo momento
 
-- Implementar lógica y diseño de un componente “ordenar” (precio ascendente y descendente)
+- Implementar lógica y diseño de un componente “ordenar” (precio ascendente y descendente) :x:
   
-  Implemente una logica de orden pero de momento ordena por nombre. Esto ha sido un error mio al no fijarme bien que justo ahi arriba dice PRECIO.
+:pushpin: Implemente una logica de orden pero de momento ordena por nombre. Esto ha sido un error mio al no fijarme bien que justo ahi arriba dice PRECIO.
 
 :pushpin:  Logica de orden esta elaborada aparte del componente siempre pensando en mantener la complejidad baja a la hora de hacer tests.
 
