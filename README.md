@@ -36,7 +36,9 @@ Maquetar las imágenes adjuntas y tener en cuenta los diferentes cortes en móvi
 
 :pushpin: Responsive en todo momento
 
-- Implementar lógica y diseño de un componente “ordenar” (precio ascendente y descendente) 	:heavy_check_mark:
+- Implementar lógica y diseño de un componente “ordenar” (precio ascendente y descendente)
+  
+  Implemente una logica de orden pero de momento ordena por nombre. Esto ha sido un error mio al no fijarme bien que justo ahi arriba dice PRECIO.
 
 :pushpin:  Logica de orden esta elaborada aparte del componente siempre pensando en mantener la complejidad baja a la hora de hacer tests.
 
