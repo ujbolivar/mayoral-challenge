@@ -1,8 +1,8 @@
-import { setOrder } from '@/types/all_typedefs';
+import { SortFn } from '@/types/all_typedefs';
 
 // Sorts the list of products based on the order passed as a prop.
 
-export const Sort: setOrder = (list, order) => {
+export const Sort: SortFn = (list, order) => {
     return list.sort((a, b) => {
         const titleA: string = a.title.toLowerCase();
         const titleB: string = b.title.toLowerCase();

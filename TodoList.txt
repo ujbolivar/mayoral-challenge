@@ -15,6 +15,7 @@ PENDIENTE
 
 		Unit tests - jest / react testing library
 			
+			- TST APPLY DISCOUNT
 			- productImage component renders
 			- productPrice component renders
 			- search component renders

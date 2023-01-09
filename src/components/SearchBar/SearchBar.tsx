@@ -17,9 +17,9 @@ const SearchBar = ({ setQuery }: SearchProps) => {
         <div className={styles.container}>
             <SearchIcon sx={{ color: grey[500] }} />
             <input
-                type='text'
+                type="text"
                 className={styles.searchInput}
-                placeholder='Buscar'
+                placeholder="Buscar"
                 ref={inputRef}
                 onChange={handleChange}
             />

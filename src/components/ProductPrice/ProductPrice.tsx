@@ -1,9 +1,8 @@
 import { useMemo, useEffect, useState } from 'react';
 import styles from './ProductPrice.module.css';
-import { ProductData } from 'types/product_data';
 import { handleDiscount } from 'helpers/handleDiscount';
 
-const ProductPrice = ({ product }: ProductData) => {
+const ProductPrice = ({ id, price }) => {
     const discount = 20;
     const [flag, setFlag] = useState(false);
     const [total, setTotal] = useState(0);
@@ -13,20 +12,20 @@ const ProductPrice = ({ product }: ProductData) => {
             return (
                 <div className={styles.discountPrice}>
                     <div className={`${styles.productPrice}, ${styles.productPriceSlashed}`}>
-                        {product.price} €
+                        {price} €
                     </div>
                     {total} € (-
                     {discount}%)
                 </div>
             );
         } else {
-            return <div className={styles.productPrice}>{product.price} €</div>;
+            return <div className={styles.productPrice}>{price} €</div>;
         }
-    }, [flag, product]);
+    }, [flag]);
 
     useEffect(() => {
-        handleDiscount(product.id, product.price, discount, setFlag, setTotal);
-    }, [product]);
+        handleDiscount(id, price, discount, setFlag, setTotal);
+    }, [id, price]);
 
     return <div className={styles.container}>{renderResult}</div>;
 };
