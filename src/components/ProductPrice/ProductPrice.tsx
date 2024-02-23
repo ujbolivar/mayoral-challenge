@@ -4,6 +4,7 @@ import { ProductData } from 'types/product_data';
 
 const ProductPrice = ({ product }: ProductData) => {
     const [discount, setDiscount] = useState({ active: false, value: 0 });
+    const [discountedPrice, setDiscountedPrice] = useState(product.price);
 
     const renderResult = useMemo(() => {
         if (discount.active) {
@@ -12,7 +13,7 @@ const ProductPrice = ({ product }: ProductData) => {
                     <div className={`${styles.productPrice}, ${styles.productPriceSlashed}`}>
                         {product.price} €
                     </div>
-                    {(product.price - product.price * (discount.value / 100)).toFixed(2)} € (-
+                    {discountedPrice.toFixed(2)} € (-
                     {discount.value}%)
                 </div>
             );
@@ -22,10 +23,20 @@ const ProductPrice = ({ product }: ProductData) => {
     }, [discount, product.price]);
 
     useEffect(() => {
+        let active = false;
+        let value = 0;
+
         if (product.id % 2 === 0) {
-            setDiscount({ active: true, value: 20 });
+            active = true;
+            value = 20;
         }
-    }, [product.id]);
+
+        setDiscount({ active, value });
+
+        const newPrice = active ? product.price - (product.price * (value / 100)) : product.price;
+
+        setDiscountedPrice(newPrice);
+    }, [product.id, product.price]);
 
     return <div className={styles.container}>{renderResult}</div>;
 };
