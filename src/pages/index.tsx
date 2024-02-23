@@ -1,27 +1,21 @@
 import Head from 'next/head';
 import { GetStaticProps, NextPage } from 'next';
 import { useMemo, useState } from 'react';
+import { useQuery } from 'react-query';
 import NavBar from 'components/NavBar/NavBar';
 import ProductList from 'components/ProductList/ProductList';
-import { GetProducts } from 'lib/productData_api';
+import { fetchProducts } from 'lib/productData_api';
 import styles from 'styles/home.module.css';
 import { ProductData, ProductDataListProps } from 'types/product_data';
 
-export const getStaticProps: GetStaticProps = async (_context) => {
-    const products: ProductData[] = await GetProducts();
-    return {
-        props: {
-            productsData: products,
-        },
-        revalidate: 60,
-    };
-};
-
-const HomePage: NextPage<ProductDataListProps> = ({ productsData }: ProductDataListProps) => {
+const HomePage: NextPage<ProductDataListProps> = () => {
     const [query, setQuery] = useState('');
     const [order, setOrder] = useState('');
 
+    const { data: productsData, isLoading, isError } = useQuery<ProductData[], Error>('products', fetchProducts);
     const memoizedProductsData = useMemo(() => {
+        if (isLoading) return 'Loading...';
+        if (isError || !productsData) return 'An error has occurred';
         return <ProductList productsData={productsData} query={query} order={order} />;
     }, [productsData, query, order]);
 
