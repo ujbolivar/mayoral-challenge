@@ -18,14 +18,14 @@ const ProductCard = ({ product }: ProductData) => {
                 category={product.category}
                 variant="buttonAlt"
                 text="más colores"
-                action={colores}
+                action={() => console.log(colores)}
             />
             <Button
                 name="Añadir"
                 category={product.category}
                 variant="button"
                 text="AÑADIR"
-                action={añadir}
+                action={() => console.log(añadir)}
             />
         </div>
     );
