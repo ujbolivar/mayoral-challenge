@@ -1,5 +1,9 @@
 .page {
     margin: 0 0.8rem;
+    gap: 1rem;
+    max-width: 1041px;
+    margin: 0 auto;
+    padding: 0 1rem;
 }
 
 .loading {
