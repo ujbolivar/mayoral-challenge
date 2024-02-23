@@ -1,0 +1,129 @@
+Mayoral test:
+
+PENDIENTE
+
+	REFACTOR:
+
+	- finish taking a look at components to see where the code can be spruced up
+	
+	- discount function inside product price useeffect needs to be a pure function and 
+	extracted from the component and placed into utils/applyDiscount	
+	
+	- SET THE MOCK PRODUCTS CORRECTLY FOR JEST INSIDE __mocks__ folder
+	
+	TESTS:
+
+		Unit tests - jest / react testing library
+			
+			- productImage component renders
+			- productPrice component renders
+			- search component renders
+			- sort component renders and buttons are clickable
+			- colores button / hide colores button
+	
+	- E2E tests - Cypress
+	
+		Write all the end tests you need.
+		
+		User Actions: (maybe try with @testing-library/user-events. You need @testing-library/dom for this to work.)
+			- Can request the page and have it load
+			- Can input tt text into search
+			- Can press sort control buttons
+			- Can press Añadir button and more colores button
+	
+
+	- Integration tests - Cypress
+	
+		Write all the integration tests you need.
+	
+			- test api call
+			- NavBar component renders
+			- ProductCard component renders
+			- ProductList component renders
+
+	
+
+	TEST PULLED FROM CHAT GPT
+	
+	1. Test that the component correctly renders the data received from the API using 
+	getStaticProps.
+	2. Test that the component correctly handles errors when the API call fails.
+	3. Test that the component correctly displays a loading state while the data is being 
+	fetched from the API.
+	4. Test that the component correctly handles a change in the API data and updates the 
+	display accordingly.
+	5. Test that the component correctly handles user interactions, such as clicking on a 
+	button or filling out a form.
+	6. Test that the component correctly performs a new API call when the refresh prop is set 
+	to true.
+	7. Test that the component correctly cancels the API call when the component is unmounted.
+	8. Test that the component correctly displays a "No data found" message when the API 
+	returns an empty array.
+	9. Test that the component correctly passes the necessary props to its children components.
+	10. Test that the component's output is the same across different browsers and devices 
+	using snapshots.
+
+
+HECHO
+
+	COMPONENTES:
+		create components - DONE
+	
+		navbar:
+			- search component - DONE
+			- sort component - DONE
+		body:
+			- item list - DONE
+			- item card - DONE
+			- add button - DONE
+			- spinner - DONE
+
+
+	ESTILOS:
+	
+	- Refactor button conditional rendering directly inside classname attribute - DONE
+
+	- Dependiendo de si asc o desc esta activo, el boton correspondiente tiene que estar un 
+	poco mas oscuro, copy it from the button css rule for the .button:active class {}to switch 	
+	to grey[500] - DONE
+
+	- si el productos no es de categoria 'electronics' no mostrar 'mas colores' - DONE
+
+	- BUG: Product card dimensions change to fit entire screen when search returns few items. - DONE
+	
+	- Refactorizar component imagen. - DONE
+
+	- When a discount is applied, the original price has to have a black strikethrough 
+	line running accross. -DONE
+
+	- NavBar Mobile view display block with sort on top of search input and a thin grey 
+	line dividing the header from the main part of the app. - DONE	
+	
+	- media containers for ProductsList Component desktop (5 - 4 - 3) mobile (2) grid - DONE
+
+	- Añade margen lateral dentro del cuerpo entero de la 
+	aplicacion
+
+	- Components: Styles all components as they want in the mockup. -DONE
+
+	ACCIONES:
+		- API call - DONE		
+		- Memoize after api call promise response and static generation - DONE
+		- Set revalidate to 1 minute
+		- Search over list -DONE
+		- Sort list - DONE
+		- use sortOrder to apply sort direction on button press -DONE
+		- Add useMemo to the set Disocunt function in useEffect -DONE
+
+	REFACTOR:
+	
+		- Do not memoize inside the product list? - DONE
+		- añadir and mas colores text to be put inside separate files inside utils with their 
+		console.log and imported into product card , stored in constant variables and then be 
+		given to the button actions attribute.
+	
+	TESTS:
+	
+		- end to end tests
+			- test pure functions search and sort - DONE
+			- añadir button renders and is clickable - DONE

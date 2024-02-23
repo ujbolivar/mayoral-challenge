@@ -1,0 +1,19 @@
+.page {
+    margin: 0 0.8rem;
+    gap: 1rem;
+    max-width: 1041px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 5vw;
+    height: 5vh;
+    transform: translate(-50%, -50%);
+}

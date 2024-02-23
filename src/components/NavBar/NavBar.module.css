@@ -1,0 +1,41 @@
+.container {
+    container-type: inline-size;
+}
+
+@container (min-width: 600px) {
+    .navBar {
+        /* width: inherit; */
+        /* height: 40px; */
+        /* display: flex; */
+        /* justify-content: space-between; */
+        margin: 2rem 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@container (max-width: 870px) {
+    .navBar {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        margin: 1rem auto;
+    }
+    .navBar > * {
+        align-self: center;
+        margin-bottom: 1rem;
+    }
+}
+
+@container (max-width: 599px) {
+    .navBar {
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 1rem auto;
+        align-content: center;
+        border-bottom: 1px solid #eaeaea;
+    }
+    .navBar > * {
+        align-self: center;
+        margin-bottom: 1rem;
+    }
+}

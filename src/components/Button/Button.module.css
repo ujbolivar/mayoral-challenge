@@ -1,0 +1,36 @@
+.Button {
+    padding: 0.5rem 1rem;
+    background-color: #4f9add;
+    color: #ffffff;
+    font-weight: 500;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.Button:hover,
+.Button:active {
+    color: #eeeeee;
+}
+
+.ButtonAlt {
+    background: none;
+    border: none;
+    font-size: 0.8rem;
+    font-weight: 300;
+}
+
+.ButtonAlt:hover,
+.ButtonAlt:active {
+    color: #ccc;
+}
+
+.ButtonNone {
+    visibility: hidden;
+}
+
+@container (min-width: 600px) {
+    .Button {
+        margin-bottom: 1rem;
+    }
+}

@@ -1,0 +1,12 @@
+.sort {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.sort button {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
